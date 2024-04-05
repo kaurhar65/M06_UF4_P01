@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // Importa PropTypes
+
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Auth/Home';
-import Login from './pages/Auth/Login';
-import Register from './pages/Auth/Register';
-import Header from './components/nav/Header';
-
-
+import Login from './Pages/Auth/Login';
+import Register from './Pages/Auth/Register';
+import Header from './Components/nav/header';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,13 +17,16 @@ const router = createBrowserRouter(
   )
 )
 
-function App({routes}) {
-
+function App({ routes }) {
   return (
     <>
       <RouterProvider router={router}/>
     </>
   );
 }
+
+App.propTypes = {
+  routes: PropTypes.array 
+};
 
 export default App;

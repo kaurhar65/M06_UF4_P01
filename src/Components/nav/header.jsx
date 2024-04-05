@@ -12,7 +12,7 @@ const Header = () => {
   };
   return (
     <>
-    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
+     <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
       <Menu.Item key="h" icon= {<HomeTwoTone />}>
        <Link to="/">Home</Link>
       </Menu.Item>
@@ -23,7 +23,9 @@ const Header = () => {
         <Link to="/login">Login</Link>
       </Menu.Item>
      </Menu>
-   </>
+     <Outlet/>
+    </>
+   
   )
 };
 export default Header;
